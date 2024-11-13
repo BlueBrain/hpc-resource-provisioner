@@ -19,6 +19,8 @@ jobs:
           ref: ${{ env.REL_BRANCH }}
       - name: Determine version
         run: |
+          cat hpc_provisioner/pyproject.toml
+          awk '/version =/ {print $3}' hpc_provisioner/pyproject.toml | tr -d '"'
           echo REL_TAG=$(awk '/version =/ {print $3}' hpc_provisioner/pyproject.toml | tr -d '"') >> $GITHUB_ENV
       - name: Create and upload tag ${{ env.REL_TAG }}
         run: |
