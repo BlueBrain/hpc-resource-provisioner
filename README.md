@@ -1,3 +1,7 @@
+> [!WARNING]
+> The Blue Brain Project concluded in December 2024, so development has ceased under the BlueBrain GitHub organization.
+> Future development will take place at: https://github.com/openbraininstitute/hpc-resource-provisioner
+
 # HPC Resource Provisioner
 
 The HPC Resource Provisioner is a small application that offers an API to manage the creation and deletion of parallel-clusters in AWS. When creating a parallel-cluster, consumers are expected to poll regularly to check the progress.
